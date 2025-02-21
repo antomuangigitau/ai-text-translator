@@ -148,6 +148,7 @@ function App() {
                       ))}
                     </select>
                     <button
+                      aria-label="Translate Message"
                       onClick={() => handleTranslate(index)}
                       className="bg-blue-500 text-white px-2 py-2 rounded-lg text-xs hover:bg-blue-600">
                       Translate
@@ -170,8 +171,9 @@ function App() {
               onChange={(e) => setUserInput(e.target.value)}
               placeholder="Type your message..."
               className="w-full"
+              aria-label="Type your message in the text area"
             />
-            <button onClick={handleSend}>
+            <button aria-label="Send Message" onClick={handleSend}>
               <SendHorizontal color="blue" size={32} />
             </button>
           </div>
